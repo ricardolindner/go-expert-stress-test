@@ -12,7 +12,6 @@ import (
 	"github.com/schollz/progressbar/v3"
 )
 
-// Configuração do CLI.
 var (
 	url         string
 	totalReqs   int
@@ -61,7 +60,6 @@ func main() {
 
 	startTime := time.Now()
 
-	// Cria e executa os workers.
 	for i := 0; i < concurrency; i++ {
 		wg.Add(1)
 		go func(workerID int) {
