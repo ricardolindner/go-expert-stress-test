@@ -10,6 +10,7 @@ It allows you to simulate a high volume of traffic to a specified API, helping y
 - [How It Works](#how-it-works)
 - [Getting Started](#getting-started)
 - [Running the Project](#running-the-project)
+- [Report Sample](#report-sample)
 
 ---
 
@@ -69,7 +70,7 @@ go run ./cmd/server/main.go --url=http://google.com --requests=1000 --concurrenc
 ```
 
 ### 2. Running with docker
-Build the Docker image:
+From the project's root directory, build the Docker image:
 ```bash
 docker build -t stress-test-cli .
 ```
@@ -79,3 +80,18 @@ docker run --rm stress-test-cli --url=http://google.com --requests=1000 --concur
 ```
 
 ## Report Sample
+```
+### Relatório do Teste de Carga ###
+Tempo total gasto: 2.348s
+Total de requests: 100
+
+----------------------------------------
+
+Requisições retornadas com status HTTP 200:
+  - Requisições com status 200: 100
+Não foram registrados status diferente de sucesso
+
+----------------------------------------
+
+Média de latência por request: 227.315ms
+```
